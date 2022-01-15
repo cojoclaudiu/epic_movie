@@ -1,0 +1,8 @@
+.movieWrapper {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-auto-flow: var(--gridFlow);
+  grid-template-columns: var(--colsMoviePage);
+  grid-template-rows: var(--rowsMoviePage);
+}

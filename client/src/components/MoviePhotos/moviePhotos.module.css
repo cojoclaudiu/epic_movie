@@ -1,0 +1,9 @@
+.photosContainer {
+  display: flex;
+}
+
+.photoItem {
+  width: 14rem;
+  height: 14rem;
+  object-fit: cover;
+}

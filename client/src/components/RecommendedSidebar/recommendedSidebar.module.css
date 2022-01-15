@@ -1,0 +1,11 @@
+.recommendedSidebar {
+  display: grid;
+  height: 100%;
+  grid-auto-flow: row;
+  gap: 1rem 0;
+  overflow-y: scroll;
+}
+
+.relatedMovie {
+  border-radius: 0.5rem;
+}

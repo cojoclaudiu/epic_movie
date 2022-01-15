@@ -1,0 +1,10 @@
+.duration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  width: max-content;
+  background-color: var(--primary);
+  color: var(--dark-1);
+  line-height: 1;
+}

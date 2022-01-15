@@ -1,0 +1,8 @@
+.metaItem {
+  display: flex;
+}
+
+.metaItemTitle {
+  font-weight: bold;
+  padding-right: 0.5rem;
+}

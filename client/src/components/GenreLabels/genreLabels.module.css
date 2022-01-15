@@ -1,0 +1,22 @@
+.labelContainer {
+  display: flex;
+  height: max-content;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1;
+  color: var(--dark-1);
+}
+
+.labelContainer > .label:not(:last-child) {
+  margin-right: 0.6rem;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.2rem;
+  padding: 0.4rem 0.4rem 0.2rem 0.4rem;
+  background-color: var(--primary);
+  text-transform: uppercase;
+}

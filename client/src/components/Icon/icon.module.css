@@ -1,0 +1,16 @@
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  padding: 1rem;
+  height: max-content;
+  color: var(--yellow-9);
+  transition: color 0.3s ease;
+}
+
+.iconContainer:hover {
+  background-color: var(--yellow-2);
+  color: var(--dark-1);
+  border-radius: 50%;
+}

@@ -1,0 +1,16 @@
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: max-content;
+  height: max-content;
+
+  color: var(--dark-1);
+  background-color: var(--primary);
+  font-weight: bolder;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 0.2rem 0.2rem 0.1rem 0.2rem;
+  border-radius: 0.2rem;
+}

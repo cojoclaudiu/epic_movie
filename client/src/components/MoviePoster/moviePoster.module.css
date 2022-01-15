@@ -1,0 +1,34 @@
+.moviePoster {
+  display: grid;
+  grid-template-rows: max-content 5fr 2fr;
+  width: 100%;
+  height: 100%;
+}
+
+.poster {
+  grid-area: 1 / 1 / 4 / 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.posterDetails {
+  display: grid;
+  padding: 0 2rem;
+  grid-area: 3 / 1 / 4 / 1;
+  background: var(--grid-poster);
+}
+
+.addToWatchlist {
+  grid-area: 1 / 1 / 2 / 1;
+  padding: 2rem;
+  align-self: center;
+  justify-self: end;
+}
+
+.posterTitle {
+  color: var(--white);
+  font-size: 4rem;
+  font-weight: bolder;
+}

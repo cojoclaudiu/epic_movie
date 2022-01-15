@@ -1,0 +1,20 @@
+:root {
+  --colsMoviePage: 10rem 1fr 2fr 10%;
+  --rowsMoviePage: auto;
+  --gridFlow: column;
+
+  --primary: var(--yellow-1);
+  --white: white;
+
+  --yellow-1: #fbd040;
+  --yellow-2: #fcd64e;
+  --yellow-9: #988034;
+
+  --dark-1: #383937;
+
+  --gray-1: #f5f5f5;
+  --gray-8: #c8c5c3;
+  --gray-9: #626462;
+
+  --grid-poster: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(255,255,255,0) 100%);
+}
