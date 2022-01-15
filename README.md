@@ -1,3 +1,3 @@
-# epic_movie
+## epic_movie fullstack application
 
-## docker compose up - to start backend
+docker compose up - to start backend
