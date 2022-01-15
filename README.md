@@ -1,3 +1,3 @@
 # epic_movie
 
-# docker compose up - to start backend
+## docker compose up - to start backend
