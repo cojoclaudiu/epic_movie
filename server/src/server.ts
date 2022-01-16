@@ -13,10 +13,10 @@ const debugLog: debug.IDebugger = debug('app');
 const routes: Array<CommonRoutesConfig> = [];
 
 routes.push(new MoviesRoutes(app));
+
 server.listen(PORT, () => {
   routes.forEach((route: CommonRoutesConfig) => {
     debugLog(`Routes configured for ${route.getName()}`);
   });
-
   console.log(runningMessage(PORT));
 });

@@ -10,5 +10,16 @@ services:
       - .:/usr/src/app # map eveything from vscode dir to our dir
       - /usr/src/app/node_modules
     command: npm run start:docker
+    depends_on:
+      - movieDB
     environment:
-      - PORT=8000
+      DATABASE_URL: postgres://postgres@movieDB/movie_app_dev
+      PORT: 8000
+
+  movieDB:
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: movie_app_dev
+      POSTGRES_HOST_AUTH_METHOD: trust

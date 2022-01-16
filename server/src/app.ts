@@ -4,9 +4,9 @@ import helmet from 'helmet';
 import * as winston from 'winston';
 import * as expressWinston from 'express-winston';
 import cors from 'cors';
-import { PORT } from './server';
 
-export const runningMessage = (portNumber: number) => `Server running at http://localhost:${PORT}`;
+export const runningMessage = (portNumber: number) =>
+  `Server running at http://localhost:${portNumber}`;
 
 const app: Application = express();
 

@@ -5,11 +5,13 @@
   "main": "server.js",
   "scripts": {
     "build": "rimraf dist && swc ./src -d dist",
+    "build-dev": "npm run build && NODE_ENV=development node --inspect dist/server.js",
     "debug": "export DEBUG=* && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node --unhandled-rejections=strict dist/server.js",
     "start:docker": "npm run build && node --inspect=0.0.0.0 dist/server.js",
-    "start:nodemon": "nodemon"
+    "dev": "nodemon --ext ts --exec \"npm run build-dev\"",
+    "db:console": "docker compose exec movieDB psql -h localhost -U postgres -d movie_app_dev"
   },
   "author": "",
   "license": "ISC",
