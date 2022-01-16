@@ -2,7 +2,7 @@
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url = env("DATABASE_URL")
 }
 
 generator client {
@@ -10,5 +10,18 @@ generator client {
 }
 
 model Movie {
-  id Int @id @default(autoincrement())
+  id String @id
+  title String
+  description String
+  poster String
+  photos String[]
+  category String
+  contentRating String
+  genre String[]
+  actor String[]
+  director String[]
+  creator String[]
+  duration String
+
+  @@map("movies")
 }

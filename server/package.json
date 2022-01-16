@@ -11,7 +11,8 @@
     "start": "node --unhandled-rejections=strict dist/server.js",
     "start:docker": "npm run build && node --inspect=0.0.0.0 dist/server.js",
     "dev": "nodemon --ext ts --exec \"npm run build-dev\"",
-    "db:console": "docker compose exec movieDB psql -h localhost -U postgres -d movie_app_dev"
+    "db:console": "docker compose exec movieDB psql -h localhost -U postgres -d movie_app_dev",
+    "rebuild:be" :"docker compose build backend && docker compose rm --stop backend && docker compose up -d backend"
   },
   "author": "",
   "license": "ISC",
@@ -38,6 +39,7 @@
     "@typescript-eslint/parser": "^5.9.1",
     "eslint": "^8.6.0",
     "nodemon": "^2.0.15",
+    "prisma": "^3.8.1",
     "rimraf": "^3.0.2",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.4"
