@@ -1,5 +1,6 @@
 import CommonRoutesConfig from '../common/common.routes.config';
-import { Application, NextFunction, request, Request, Response } from 'express';
+import { Application, NextFunction, Request, Response } from 'express';
+import dataJson from '../model/data.json';
 import getMovieData from '../model/movie.model';
 
 class MoviesRoutes extends CommonRoutesConfig {

@@ -1,3 +1,4 @@
+import path from 'path';
 import express, { Application, Request, Response } from 'express';
 import helmet from 'helmet';
 import * as winston from 'winston';
@@ -5,18 +6,32 @@ import * as expressWinston from 'express-winston';
 import cors from 'cors';
 import { PORT } from './server';
 
-export const runningMessage = (portNumber: number) =>
-  `Server running at http://localhost:${portNumber}`;
+export const runningMessage = (portNumber: number) => `Server running at http://localhost:${PORT}`;
 
 const app: Application = express();
 
-app.use(helmet());
 app.use(
-  cors({
-    origin: 'http://localhost:3000'
+  helmet.contentSecurityPolicy({
+    useDefaults: false,
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", 'media-amazon.com'],
+      objectSrc: ["'none'"],
+      upgradeInsecureRequests: [],
+      imgSrc: ['m.media-amazon.com']
+    }
   })
 );
+
 app.use(express.json());
+
+app.use(
+  cors({
+    origin: 'http://localhost:8000'
+  })
+);
+
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 const loggerOptions: expressWinston.LoggerOptions = {
   transports: [new winston.transports.Console()],
@@ -34,7 +49,7 @@ if (!process.env.DEBUG) {
 app.use(expressWinston.logger(loggerOptions));
 
 app.get('/', (req: Request, res: Response) => {
-  res.status(200).send(runningMessage(PORT));
+  res.status(200).sendFile(path.join(__dirname, '..', 'public', 'index.html'));
 });
 
 export default app;

@@ -3,7 +3,7 @@ import styles from './moviePoster.module.css';
 import Button from '../Button';
 import { useGetMovieDataQuery } from '../../store/services/movie';
 import GenreLabels from '../GenreLabels';
-import Rating from '../Rating';
+import MovieRating from '../MovieRating';
 import Duration from '../Duration';
 
 function MoviePoster() {
@@ -22,7 +22,7 @@ function MoviePoster() {
       <div className={styles.posterDetails}>
         <GenreLabels labels={genre} />
         <div className={styles.posterTitle}>{name}</div>
-        <Rating rating={aggregateRating?.ratingValue ?? 'n/a'} />
+        <MovieRating rating={aggregateRating?.ratingValue ?? 'n/a'} />
         <Duration duration={duration ?? 'n/a'} />
       </div>
     </div>

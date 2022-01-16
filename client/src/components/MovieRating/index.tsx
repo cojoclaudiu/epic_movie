@@ -5,8 +5,8 @@ type RatingProps = {
   rating: string;
 };
 
-function Rating({ rating }: RatingProps) {
+function MovieRating({ rating }: RatingProps) {
   return <div className={styles.rating}>{rating}</div>;
 }
 
-export default Rating;
+export default MovieRating;

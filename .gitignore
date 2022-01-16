@@ -8,3 +8,4 @@ server/node_modules
 server/dist
 server/*.local
 server/.DS_Store
+server/public

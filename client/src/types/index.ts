@@ -6,4 +6,7 @@ export interface IMovie {
     ratingValue: string;
   };
   duration: string;
+  trailer: {
+    description: string;
+  };
 }
